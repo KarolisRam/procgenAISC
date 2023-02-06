@@ -74,7 +74,8 @@ class MazeRedLineYellowGemTest : public BasicAbstractGame {
         agent->x = margin + .5;
         agent->y = margin + .5;
 
-        maze_gen_aisc->generate_maze();
+//        maze_gen_aisc->generate_maze();
+        maze_gen_aisc->generate_maze_no_dead_ends();
         // maze_gen_aisc-> deterministic_place(GOAL, false);
         // maze_gen_aisc-> deterministic_place(ARROW, true);
         maze_gen_aisc->place_objects(GOAL, 1);
