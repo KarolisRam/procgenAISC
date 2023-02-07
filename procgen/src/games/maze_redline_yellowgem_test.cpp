@@ -44,7 +44,7 @@ class MazeRedLineYellowGemTest : public BasicAbstractGame {
         int dist_diff = options.distribution_mode;
 
         if (dist_diff == EasyMode) {
-            world_dim = 3;
+            world_dim = 5;
         } else if (dist_diff == HardMode) {
             world_dim = 25;
         } else if (dist_diff == MemoryMode) {
