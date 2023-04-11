@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 import argparse
+from datetime import datetime
+import os
+import matplotlib.pyplot as plt
 
 from procgen import ProcgenGym3Env
 from .env import ENV_NAMES
@@ -9,8 +12,18 @@ class ProcgenInteractive(Interactive):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self._saved_state = None
+        self.c = 0
 
     def _update(self, dt, keys_clicked, keys_pressed):
+        if self.c == 0:
+            agent_obs = unwrap(self._env).observe()[1]['rgb']
+            human_obs = unwrap(self._env).get_info()[0]['rgb']
+            dt_str = datetime.now().strftime('%Y-%m-%d-%H%M%S')
+            agent_obs_path = os.path.join('/home/karolis/k/goal-misgeneralization/writeup/pics/wip', f'{dt_str}-obs-agent.png')
+            human_obs_path = os.path.join('/home/karolis/k/goal-misgeneralization/writeup/pics/wip', f'{dt_str}-obs-human.png')
+            plt.imsave(agent_obs_path, agent_obs[0])
+            plt.imsave(human_obs_path, human_obs)
+        self.c += 1
         if "LEFT_SHIFT" in keys_pressed and "F1" in keys_clicked:
             print("save state")
             self._saved_state = unwrap(self._env).get_state()
