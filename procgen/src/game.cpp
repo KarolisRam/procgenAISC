@@ -55,6 +55,8 @@ void Game::parse_options(std::string name, VecOptions opts) {
     opts.consume_int("rand_region", &options.rand_region); //changed new
     opts.consume_bool("continue_after_coin", &options.continue_after_coin); //changed new
     opts.consume_int("world_dim", &options.world_dim); //changed new
+    opts.consume_string("obj1", &options.obj1); //changed new
+    opts.consume_string("obj2", &options.obj2); //changed new
 
     int dist_mode = EasyMode;
     opts.consume_int("distribution_mode", &dist_mode);
@@ -196,6 +198,8 @@ void Game::serialize(WriteBuffer *b) {
     b->write_int(options.rand_region); // changed new
     b->write_int(options.continue_after_coin); // changed new
     b->write_int(options.world_dim); // changed new
+    b->write_string(options.obj1); // changed new
+    b->write_string(options.obj2); // changed new
 
     b->write_int(options.use_easy_jump);
     b->write_int(options.plain_assets);
@@ -263,6 +267,8 @@ void Game::deserialize(ReadBuffer *b) {
     options.rand_region = b->read_int(); // changed new
     options.continue_after_coin = b->read_int(); // changed new
     options.world_dim = b->read_int(); // changed new
+    options.obj1 = b->read_string(); // changed new
+    options.obj2 = b->read_string(); // changed new
 
     options.use_easy_jump = b->read_int();
     options.plain_assets = b->read_int();

@@ -3,9 +3,6 @@
 
 const std::string NAME = "maze_colorsobjects_duel";
 
-const std::string OBJ1 = "kenney/Items/pure_red_line_diag.png";
-const std::string OBJ2 = "kenney/Items/pure_yellow_gem.png";
-
 const float REWARD1 = 10.0;
 const float REWARD2 = -10.0;
 
@@ -36,9 +33,9 @@ class MazeColorsObjectsDuel : public BasicAbstractGame {
         if (type == WALL_OBJ) {
             names.push_back("kenney/Ground/Sand/sandCenter.png");
         } else if (type == GOAL1) {
-            names.push_back(OBJ1);
+            names.push_back("kenney/Items/pure_" + options.obj1 + ".png");
         } else if (type == GOAL2) {
-            names.push_back(OBJ2);
+            names.push_back("kenney/Items/pure_" + options.obj2 + ".png");
         } else if (type == PLAYER) {
             names.push_back("kenney/Enemies/mouse_move.png");
         }

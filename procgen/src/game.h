@@ -60,6 +60,8 @@ struct GameOptions {
     int rand_region = 0;
     bool continue_after_coin;
     int world_dim = 5;
+    std::string obj1 = "red_line_diag";
+    std::string obj2 = "yellow_gem";
 
     // coinrun_old
     bool use_easy_jump = false;

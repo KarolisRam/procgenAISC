@@ -254,6 +254,8 @@ class ProcgenGym3Env(BaseProcgenEnv):
         corruption_severity=1,
         continue_after_coin=False,
         world_dim=5,
+        obj1='red_line_diag',
+        obj2='yellow_gem',
         **kwargs,
     ):
         self.corruption_type = corruption_type
@@ -289,6 +291,8 @@ class ProcgenGym3Env(BaseProcgenEnv):
                 "rand_region": int(rand_region),
                 "continue_after_coin": bool(continue_after_coin),
                 "world_dim": int(world_dim),
+                "obj1": str(obj1),
+                "obj2": str(obj2),
             }
         super().__init__(num, env_name, options, **kwargs)
     

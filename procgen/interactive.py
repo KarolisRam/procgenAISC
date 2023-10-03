@@ -157,6 +157,18 @@ def main():
         type=int,
         help="Maze grid dimension in easy difficulty",
     )
+    advanced_group.add_argument(
+        "--obj1",
+        default='red_line_diag',
+        type=str,
+        help="Maze object duel first object",
+    )
+    advanced_group.add_argument(
+        "--obj2",
+        default='yellow_gem',
+        type=str,
+        help="Maze object duel second object",
+    )
 
     args = parser.parse_args()
 
@@ -173,6 +185,8 @@ def main():
         "step_penalty": args.step_penalty,
         "continue_after_coin": args.continue_after_coin,
         "world_dim": args.world_dim,
+        "obj1": args.obj1,
+        "obj2": args.obj2,
     }
     
     if args.env_name != "coinrun_old":
