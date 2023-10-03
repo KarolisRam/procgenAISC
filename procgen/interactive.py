@@ -151,6 +151,12 @@ def main():
         default=False,
         help="use monochromatic rectangles instead of human designed assets",
     )
+    advanced_group.add_argument(
+        "--world-dim",
+        default=5,
+        type=int,
+        help="Maze grid dimension in easy difficulty",
+    )
 
     args = parser.parse_args()
 
@@ -166,6 +172,7 @@ def main():
         "key_penalty": args.key_penalty,
         "step_penalty": args.step_penalty,
         "continue_after_coin": args.continue_after_coin,
+        "world_dim": args.world_dim,
     }
     
     if args.env_name != "coinrun_old":

@@ -59,6 +59,7 @@ struct GameOptions {
     int step_penalty = 0;
     int rand_region = 0;
     bool continue_after_coin;
+    int world_dim = 5;
 
     // coinrun_old
     bool use_easy_jump = false;

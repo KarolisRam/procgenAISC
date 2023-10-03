@@ -48,7 +48,7 @@ class MazeColorsObjectsDuel : public BasicAbstractGame {
         int dist_diff = options.distribution_mode;
 
         if (dist_diff == EasyMode) {
-            world_dim = 5;
+            world_dim = options.world_dim;
         } else if (dist_diff == HardMode) {
             world_dim = 25;
         } else if (dist_diff == MemoryMode) {
