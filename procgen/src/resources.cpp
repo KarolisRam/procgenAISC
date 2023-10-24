@@ -366,6 +366,7 @@ void images_load() {
         "kenney/Items/pure_cyan_line_diag.png",
         "kenney/Items/pure_green_gem.png",
         "kenney/Items/pure_green_line_diag.png",
+        "kenney/Items/pure_invisible_gem.png",
         "kenney/Items/pure_purple_gem.png",
         "kenney/Items/pure_purple_line_diag.png",
         "kenney/Items/pure_red_gem.png",
