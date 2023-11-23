@@ -977,6 +977,7 @@ void BasicAbstractGame::set_pen_brush_color(QPainter &p, QColor color, int thick
 }
 
 void BasicAbstractGame::draw_background(QPainter &p, const QRect &rect) {
+//    p.fillRect(rect, QColor(127, 127, 127));
     p.fillRect(rect, QColor(0, 0, 0));
 
     prepare_for_drawing(rect.height());
