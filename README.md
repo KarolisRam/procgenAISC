@@ -1,4 +1,11 @@
-# Goal Misgeneralization in Procgen
+# Environment code for the paper Colour versus Shape Goal Misgeneralization in Reinforcement Learning: A Case Study
+
+This code was forked from [this repo](https://github.com/JacobPfau/procgenAISC) and built on.  
+For full details of changes and how to run it see [the parent repo](https://github.com/KarolisRam/colour-shape-goal-misgeneralization).  
+  
+For installation of dependencies check the original readme below:
+
+## Goal Misgeneralization in Procgen
 
 This is a fork of the [procgen benchmark](https://github.com/openai/procgen) that implements modifications for the paper Goal Misgeneralization in Deep Reinforcement Learning.
 
